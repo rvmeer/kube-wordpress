@@ -131,6 +131,15 @@ spec:
           claimName: mysql-volume
 ```
 
+When the MySQL pod runs, create a database:
+
+```
+kebuctl get pods
+kubectl exec -it <My SQL pod name> -- bash
+mysql -u root -p (see secrets for the password)
+create database wordpress;
+```
+
 ### Create the MySQL service
 
 ```
