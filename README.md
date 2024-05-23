@@ -8,7 +8,7 @@ I use minikube to let everything run on one node.
 
 Todo
 
-You can configure all steps below using `minikube dashboard`.
+You can configure all steps below using `minikube dashboard`. Before running the dashboard you might need to run `newgrp docker`. Or run `sudo usermod -aG docker $USER`.
 
 ## Install the different kubernetes components
 
@@ -71,7 +71,6 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: do-block-storage
 ```
 
 ### Create a MySQL replica set
@@ -168,7 +167,6 @@ spec:
   resources:
     requests:
       storage: 10Gi
-  storageClassName: do-block-storage
 ```
 
 ### Create the wordpress replica set
