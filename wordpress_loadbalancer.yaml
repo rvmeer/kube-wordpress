@@ -1,14 +1,14 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: wordpress-lb
+  name: ${WP_NAME}-lb
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
     # service.beta.kubernetes.io/do-loadbalancer-healthcheck-path: "/wp-login.php"
 spec:
   type: LoadBalancer
   selector:
-    app: wordpress
+    app: ${WP_NAME}
   ports:
     - name: http
       protocol: TCP

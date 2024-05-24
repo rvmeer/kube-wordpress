@@ -19,6 +19,18 @@ You can configure all steps below using `minikube dashboard`. Before running the
 
 See also: https://minikube.sigs.k8s.io/docs/start/
 
+## Install everything at once
+
+Run ./deploy.sh
+
+this scripts needs 3 environment variables:
+
+```
+export WP_NAME=<name of the wordpress, as used in kubernetes>
+export MYSQL_DATABASE=<name of the wordpress db in MySQL>
+export MYSQL_ROOT_PASSWORD=<root password of the db, same for every Wordpress instance>
+```
+
 ## Install the different kubernetes components
 
 We're going to install:

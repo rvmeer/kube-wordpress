@@ -1,2 +1,2 @@
-kubectl apply -f phpmyadmin_replice_set.yaml
-kubectl apply -f phpmyadmin_loadbalancer.yaml
+envsubst < phpmyadmin_replica_set.yaml | kubectl apply -f -
+envsubst < phpmyadmin_loadbalancer.yaml | kubectl apply -f -
