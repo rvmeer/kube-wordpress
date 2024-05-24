@@ -18,6 +18,8 @@ spec:
       containers:
       - name: database
         image: mysql:5.7
+        # use this on ARM:
+        # image: biarms/mysql:5.7
         resources:
           limits:
             memory: 512Mi
